@@ -5,7 +5,6 @@ set -xe
 timeout=10
 
 function main {
-	
 	set_up
 	query=$(build_query "$@")
 	curl_img $(get_href "$query")
@@ -72,13 +71,7 @@ function set_desktop_img {
 
 main "$@"
 
-# Better as a service or cron job maybe?
-#while :
-#do
-#get_img
-#set
-#sleep 5
-#done
-
-#ln -s /home/ehix/workspace/randwp/script.sh /home/ehix/bin/randwp
-#echo alias randwp=/home/ehix/bin/randwp >> ~/.bash_aliases
+# Create link to bin/
+# ln -s randwp/script.sh /home/usr/bin/randwp
+# Create alias
+# echo alias randwp=/home/usr/bin/randwp >> ~/.bash_aliases
